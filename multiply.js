@@ -1,10 +1,10 @@
 function multiply(matrix1, matrix2) {
     var result = [];
     for(var i = 0; i < matrix1.length; i++) {
-        result.push([]);
-        for(var j = 0; j < matrix1.length; j++) {
+        result[i] = [];
+        for(var j = 0; j < matrix2[0].length; j++) {
             var sum = 0;
-            for(var k = 0; k < matrix2.length; k++) {
+            for(var k = 0; k < matrix1[0].length; k++) {
                 sum += matrix1[i][k] * matrix2[k][j];
             }
             result[i][j] = sum;
